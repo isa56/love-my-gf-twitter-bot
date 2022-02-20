@@ -14,6 +14,7 @@ const tweet = new Twit({
 
 
 const oneHour = 3600000;
+const halfAnHour = 1800000;
 
 function action() {
 
@@ -61,4 +62,4 @@ function action() {
 
 }
 
-setInterval(action, oneHour);
+setInterval(action, halfAnHour);
