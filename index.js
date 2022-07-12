@@ -54,9 +54,20 @@ function action() {
         "*big mouth* ᵃ",
         "All I wanna do is wake up next to you every single day",
         "I would love to be with you 24/7, my heart",
+        "They are just so so so handsome, I can not.",
+        "I wanna go to the beach with them",
+        "*sees photo of gf* BARK BARK BARK WOOF WOOF WOOF",
+        "Oh, babe, you are the most beautiful person in this world.",
+        "I hope we can spend the rest of our lives together.",
+        "I can't wait to see you again, my heart",
+        "I'd join the dark side as long as you were there, V.",
+        "Bae, are you a Sith Lord? Because I've Fallen for you.",
+        "Call me Shirou Emiya cuz Fate is teeling me to Stay the Night with you, darling ( ͡° ͜ʖ ͡°)",
+        "I Chose You from the moment I saw you on the wild",
+        "I think I need a Paralyze Heal, cuz you're Stunning.",
     ];
 
-    const position = Math.floor(Math.random() * 23);
+    const position = Math.floor(Math.random() * (sentences.length));
 
     tweet.post(
         'statuses/update',  // funcao de postar tweet
