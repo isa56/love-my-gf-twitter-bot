@@ -12,9 +12,15 @@ const tweet = new Twit({
 });
 
 
-
+const beganDating = new Date(2020, 07, 18);
 const oneHour = 3600000;
 const halfAnHour = 1800000;
+
+const daysTogether = () => Math.ceil((new Date().getTime() - beganDating.getTime())/(1000*3600*24));
+const monthsTogether = () => (Math.floor((new Date().getTime() - beganDating.getTime()) / (1000*3600*24*30)));
+const yearsTogether = () => Math.floor((new Date().getTime() - beganDating.getTime()) / (1000*3600*24*365));
+
+const monthsTogetherThisYear = () => (monthsTogether() - (yearsTogether() * 12));
 
 function action() {
 
@@ -39,8 +45,8 @@ function action() {
         "My bae's so smart it makes me >//< I love it when they talk about anything they're interested in",
         "I love seeing my sweetheart doing the things they love, be it gaming, reading or nerding",
         "Every single minute being with you has been worth it",
-        "Hey, V. Thank you for these 1 year and 8 months. It means the world to me.",
-        "It's been more than 600 days with my love. Not all have been perfect, but it's all worth it because I have them.",
+        `Hey, V. Thank you for these ${yearsTogether()} year${yearsTogether() > 1 ? 's' : ''} and ${monthsTogetherThisYear()} month${monthsTogetherThisYear() > 1 ? 's' : ''}. It means the world to me.`,
+        `It's been more than ${daysTogether()} days with my love. Not all have been perfect, but it's all worth it because I have them.`,
         "I would sword fight while flirting with you anytime",
         "Hey, I can help you study the chemistry that exists between us, dear",
         "Hey, love, I'm here just to tell you how much I love you.",
@@ -67,4 +73,4 @@ function action() {
 
 }
 
-setInterval(action, halfAnHour);
+setInterval(action, oneHour);
